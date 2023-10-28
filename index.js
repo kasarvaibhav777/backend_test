@@ -3,11 +3,15 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const mongoose = require('mongoose')
 const route = require('./src/routes/routes.js')
+const ejs = require('ejs');
+const path = require('path');
 
 require('dotenv').config()
 const app = express()
 
 app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(cookieParser());
 app.use(session({ secret: 'vaibhav_1234', resave: false, saveUninitialized: false }));
