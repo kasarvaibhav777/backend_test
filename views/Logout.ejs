@@ -1,0 +1,59 @@
+<ul class="nav">
+  <li><a href="/logout">Logout</a></li>
+</ul>
+
+<link rel="stylesheet" href="../assets/style.css" />
+
+<h1
+  style="
+    color: rgba(207, 255, 32, 0.59);
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  "
+>
+  Successful Login
+</h1>
+<br />
+<br />
+
+
+
+<div
+  style="
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  "
+>
+  <div>
+    <!-- Form 1: Submit text message -->
+    <form action="/submit_cookies" method="POST">
+      <label for="messageText">Submit text message</label><br />
+      <input type="text" name="messageText" id="messageText" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <!-- Form 2: Search text message -->
+    <form action="/search_cookies" method="GET">
+      <label for="searchMessageText">Search text message</label><br />
+      <input type="text" name="searchMessageText" id="searchMessageText" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+    <label>Show searched text message here</label><br />
+    <textarea name="searchedMessageText" id="" cols="30" rows="10">
+<%=data %></textarea
+    >
+
+    <!-- Form 3: Clear all -->
+    <form action="/clear_cookies" method="GET">
+      <button type="submit">Clear all</button>
+    </form>
+  </div>
+</div>
