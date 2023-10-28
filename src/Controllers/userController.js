@@ -1,6 +1,5 @@
 const userModel = require("../Models/userModel.js");
 const bcrypt = require("bcrypt");
-const JWT = require("jsonwebtoken");
 const Validator = require("../Validation/validation.js");
 
 const register = async (req, res) => {
